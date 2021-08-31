@@ -138,7 +138,21 @@
                 <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
         </div>
-        <!--搜索结束-->          
+        <!--搜索结束-->     
+            <div class="hitokoto" style="
+    text-align: center;
+    color: grey;
+"><script type='text/javascript'>
+$.get("https://api.ixiaowai.cn/api/ylapi.php",function(data,status){
+    if (status == 'success'){
+        $('.hitokoto').text(data.hitokoto+"By:"+data.from);
+    }else{
+        $('.hitokoto').text('获取出错！');
+    }
+});
+</script>
+</div>
+            
         <ul class="mylist row">
             <!------>
             <li class="title"><svg class="icon" aria-hidden="true">
